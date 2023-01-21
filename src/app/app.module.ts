@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
 //IMPORT LOCALIZAÇÃO PT
@@ -20,6 +21,7 @@ import { DataBindingComponent } from './dem/data-binding/data-binding.component'
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutosComponent } from './produtos/lista-produtos/lista-produtos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CadastroComponent } from './dem/reactiveForms/cadastro/cadastro.component';
 
 
 @NgModule({
@@ -32,10 +34,12 @@ import { HttpClientModule } from '@angular/common/http';
     SobreComponent,
     DataBindingComponent,
     ListaProdutosComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })],
   ],
